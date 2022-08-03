@@ -18,7 +18,7 @@
     "@layer0/cli": "^4.13.9",
     "@layer0/core": "^4.13.9",
     "@layer0/devtools": "^4.13.9",
-    "@layer0/prefetch": "^4.13.9",
+    "@layer0/prefetch": "^4.17.1",
     "@stencil/core": "^2.7.0",
     "@types/jest": "^26.0.24",
     "jest": "^26.6.3",
