@@ -39,7 +39,7 @@ Load the site: http://127.0.0.1:3000
 You can do a production build of your app and test it locally using:
 
 ```bash
-npm run build && layer0 build && layer0 run --production
+npm run build && npm run layer0:build && npm run layer0:prod
 ```
 
 Setting --production runs your app exactly as it will be uploaded to the Layer0 cloud using serverless-offline.
