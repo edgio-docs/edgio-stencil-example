@@ -1,18 +1,7 @@
 import { Router } from '@layer0/core/router'
 
-export default new Router()
-  .static('www', ({ cache }) => {
-    cache({
-      edge: {
-        maxAgeSeconds: 60 * 60 * 60 * 365,
-        forcePrivateCaching: true,
-      },
-      browser: {
-        maxAgeSeconds: 0,
-        serviceWorkerSeconds: 60 * 60 * 24,
-      },
-    })
+export default new Router().match('/:path*', ({ serveStatic }) => {
+  serveStatic('www/:path*', {
+    onNotFound: async () => serveStatic('www/index.html'),
   })
-  .fallback(({ appShell }) => {
-    appShell('www/index.html')
-  })
+})
