@@ -1,19 +1,19 @@
-import { Component, Prop, State, h } from '@stencil/core';
-import { sayHello } from '../../helpers/utils';
+import { Component, Prop, State, h } from '@stencil/core'
+import { sayHello } from '../../helpers/utils'
 
 @Component({
   tag: 'app-profile',
   styleUrl: 'app-profile.css',
 })
 export class AppProfile {
-  @State() state = false;
-  @Prop() name: string;
+  @State() state = false
+  @Prop() name: string
 
   formattedName(): string {
     if (this.name) {
-      return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase();
+      return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase()
     }
-    return '';
+    return ''
   }
 
   render() {
@@ -34,9 +34,9 @@ export class AppProfile {
 
         <ion-item>
           <ion-label>Setting ({this.state.toString()})</ion-label>
-          <ion-toggle checked={this.state} onIonChange={ev => (this.state = ev.detail.checked)} />
+          <ion-toggle checked={this.state} onIonChange={(ev) => (this.state = ev.detail.checked)} />
         </ion-item>
       </ion-content>,
-    ];
+    ]
   }
 }

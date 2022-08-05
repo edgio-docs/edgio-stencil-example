@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h } from '@stencil/core'
 
 @Component({
   tag: 'app-root',
@@ -14,6 +14,6 @@ export class AppRoot {
         </ion-router>
         <ion-nav />
       </ion-app>
-    );
+    )
   }
 }
