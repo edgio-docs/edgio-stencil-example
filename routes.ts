@@ -1,7 +1,17 @@
 import { Router } from '@layer0/core/router'
+import { isProductionBuild } from '@layer0/core/environment'
 
-export default new Router().match('/:path*', ({ serveStatic }) => {
-  serveStatic('www/:path*', {
-    onNotFound: async () => serveStatic('www/index.html'),
+const router = new Router()
+
+if (isProductionBuild()) {
+  router.static('www')
+  router.fallback(({ serveStatic }) => {
+    serveStatic('www/index.html')
   })
-})
+} else {
+  router.fallback(({ renderWithApp }) => {
+    renderWithApp()
+  })
+}
+
+module.exports = router
