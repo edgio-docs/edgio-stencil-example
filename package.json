@@ -3,25 +3,20 @@
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watch",
-    "format": "prettier --write '**/*' --ignore-unknown",
     "generate": "stencil generate",
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
     "layer0:deploy": "layer0 deploy",
-    "layer0:prod": "layer0 run --production"
+    "layer0:production": "layer0 run --production",
+    "format": "prettier --write '**/*' --ignore-unknown"
   },
   "devDependencies": {
     "@ionic/core": "^5.3.2",
-    "@layer0/cli": "^4.18.0",
-    "@layer0/core": "^4.18.0",
-    "@layer0/devtools": "^4.18.0",
-    "@layer0/prefetch": "^4.18.0",
+    "@layer0/cli": "^4.18.1",
+    "@layer0/core": "^4.18.1",
+    "@layer0/devtools": "^4.18.1",
+    "@layer0/prefetch": "^4.18.1",
     "@stencil/core": "^2.7.0",
-    "@types/jest": "^26.0.24",
-    "jest": "^26.6.3",
-    "jest-cli": "^26.6.3",
     "prettier": "^2.6.2"
   }
 }
